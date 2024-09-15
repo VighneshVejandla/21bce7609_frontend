@@ -1,0 +1,270 @@
+/* .trademark-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.trademark-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.trademark-card.list-view {
+  flex-direction: row;
+}
+
+.trademark-card.grid-view {
+  flex-direction: column;
+  width: calc(33.333% - 16px);
+  margin: 8px;
+}
+
+.trademark-mark {
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.trademark-mark img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.trademark-details {
+  flex-grow: 1;
+}
+
+.trademark-details h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.trademark-number,
+.trademark-date {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.trademark-status {
+  text-align: right;
+  margin-left: 16px;
+}
+
+.status-label {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-label.live-registered {
+  background-color: #e6f4ea;
+  color: #137333;
+}
+
+.status-label.pending {
+  background-color: #fef7e0;
+  color: #b06000;
+}
+
+.status-label.abandoned {
+  background-color: #fce8e6;
+  color: #c5221f;
+}
+
+.status-date,
+.history-date {
+  margin: 4px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.trademark-class {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.class-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.trademark-card.grid-view .trademark-mark {
+  margin-right: 0;
+  margin-bottom: 16px;
+}
+
+.trademark-card.grid-view .trademark-details,
+.trademark-card.grid-view .trademark-status {
+  width: 100%;
+  text-align: center;
+}
+
+.trademark-card.grid-view .trademark-class {
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .trademark-card.grid-view {
+    width: calc(50% - 16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .trademark-card.list-view {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .trademark-card.list-view .trademark-mark {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .trademark-card.list-view .trademark-status {
+    text-align: left;
+    margin-left: 0;
+    margin-top: 16px;
+  }
+
+  .trademark-card.grid-view {
+    width: 100%;
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .trademark-card {
+    padding: 12px;
+  }
+
+  .trademark-mark img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .trademark-details h3 {
+    font-size: 16px;
+  }
+
+  .trademark-number,
+  .trademark-date,
+  .status-date,
+  .history-date {
+    font-size: 12px;
+  }
+} */
+
+
+
+
+.trademark-card {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.trademark-mark {
+  flex: 0 0 100px;
+  margin-right: 15px;
+}
+
+.trademark-mark img {
+  max-width: 100%;
+  height: auto;
+}
+
+.trademark-details {
+  flex: 1;
+}
+
+.trademark-details h3 {
+  color: #1a0dab;
+  margin: 0 0 5px 0;
+}
+
+.trademark-number, .trademark-date {
+  color: #006621;
+  margin: 2px 0;
+}
+
+.trademark-status {
+  flex: 0 0 150px;
+  text-align: center;
+}
+
+.status-label {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.status-label.live-registered {
+  background-color: #e6f4ea;
+  color: #1e8e3e;
+}
+
+.status-date, .history-date {
+  color: #545454;
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.trademark-class {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.class-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.trademark-class p {
+  color: #545454;
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.list-view {
+  flex-direction: row;
+}
+
+.grid-view {
+  flex-direction: column;
+  width: calc(33.33% - 20px);
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .trademark-card {
+    flex-direction: column;
+  }
+  
+  .trademark-mark, .trademark-details, .trademark-status, .trademark-class {
+    flex: 1 1 auto;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}

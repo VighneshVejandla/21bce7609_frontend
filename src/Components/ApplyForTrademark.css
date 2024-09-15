@@ -1,0 +1,90 @@
+.apply-trademark {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.apply-trademark h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.country-selection {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.country-selection img {
+  width: 24px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.country-selection .price {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.apply-now-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.apply-now-button:hover {
+  background-color: #0056b3;
+}
+
+.image-search {
+  margin-top: 20px;
+}
+
+.image-upload-area {
+  border: 2px dashed #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.camera-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.image-upload-label {
+  display: block;
+  cursor: pointer;
+}
+
+.image-upload-label p {
+  margin: 0;
+  color: #666;
+}
