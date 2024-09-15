@@ -14,29 +14,6 @@ const TrademarkCard = ({
   viewType 
 }) => {
   return (
-    // <div className={`trademark-card ${viewType}-view`}>
-    //   <div className="trademark-mark">
-    //     <img src={`https://via.placeholder.com/100?text=${mark}`} alt={mark} />
-    //   </div>
-    //   <div className="trademark-details">
-    //     <h3>{mark}</h3>
-    //     <p className="trademark-number">Number: {number}</p>
-    //     <p className="trademark-date">Filed: {date}</p>
-    //   </div>
-    //   <div className="trademark-status">
-    //     <span className={`status-label ${status?.toLowerCase().replace(/\s+/g, '-')}`}>
-    //       {status}
-    //     </span>
-    //     <p className="status-date">on {statusDate}</p>
-    //     {historyDate && (
-    //       <p className="history-date">Renewed on {historyDate}</p>
-    //     )}
-    //   </div>
-    //   <div className="trademark-class">
-    //     <img src={classIcon} alt={`Class ${className} Icon`} className="class-icon" />
-    //     <p>{className}</p>
-    //   </div>
-    // </div>
 
     <div className={`trademark-card ${viewType}-view`}>
   <div className="trademark-mark">

@@ -38,88 +38,12 @@
   padding: 20px;
   scrollbar-width: none; 
   -ms-overflow-style: none;
+  border: 1px solid black;
 }
 
-/* .trademark-list::-webkit-scrollbar {
-  display: none; 
+.trademark-list::-webkit-scrollbar {
+  display: none;
 }
-
-.trademark-list.list-view {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.trademark-list.grid-view {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.trademark-card {
-  background-color: #fff;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.trademark-card.list-view {
-  display: grid;
-  grid-template-columns: auto 1fr auto auto;
-  gap: 20px;
-  align-items: center;
-}
-
-.trademark-card.grid-view {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.trademark-mark img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.trademark-details h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.trademark-details p {
-  margin: 5px 0;
-  font-size: 14px;
-  color: #666;
-}
-
-.trademark-status .status-label {
-  font-size: 16px;
-  font-weight: bold;
-  color: #4caf50;
-}
-
-.trademark-status p {
-  margin: 5px 0;
-  font-size: 14px;
-}
-
-.history-date {
-  color: #ff6347;
-}
-
-.trademark-class img {
-  width: 24px;
-  height: 24px;
-}
-
-.trademark-class p {
-  font-size: 14px;
-  margin-top: 10px;
-} */
 
 .sidebar {
   flex: 1;

@@ -76,7 +76,7 @@ const Home = ({ searchTerm }) => {
     }
   }, [page, searchTerm, status, selectedOwners, selectedAttorneys, selectedCategories, selectedCorrespondents, sortOrder]);
 
-  console.log(trademarks);
+  // console.log(trademarks);
   const toggleView = (type) => {
     setViewType(type);
   };
@@ -111,14 +111,15 @@ const Home = ({ searchTerm }) => {
       <div className="content-wrapper">
         <div className={`trademark-list ${viewType}-view`}>
           {trademarks?.map((trademark, index) => (
+            console.log(trademark),
             <TrademarkCard
               key={index}
-              mark={trademark.mark}
-              number={trademark.number}
-              date={trademark.date}
-              status={trademark.status}
-              statusDate={trademark.statusDate}
-              className={trademark.className}
+              mark={trademark._source.current_owner}
+              number={trademark._source.number}
+              date={trademark._source.registration_date}
+              status={trademark._source.status_type}
+              statusDate={trademark._source.status_date}
+              className={trademark._source.mark_description_description}
               classIcon={trademark.classIcon}
               historyDate={trademark.historyDate}
               viewType={viewType}
