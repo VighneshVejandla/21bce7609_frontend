@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import debounce from 'lodash/debounce';
+import './SearchBar.css';
 
 const SearchBar = ({ onSearch, initialValue = '', placeholder = 'Search', debounceTime = 300 }) => {
   const [searchTerm, setSearchTerm] = useState(initialValue);
@@ -30,8 +31,8 @@ const SearchBar = ({ onSearch, initialValue = '', placeholder = 'Search', deboun
 
   return (
     <form onSubmit={handleSubmit} className="search-bar">
-      <input 
-        type="text" 
+      <input
+        type="text"
         className="search-input"
         placeholder={placeholder}
         value={searchTerm}

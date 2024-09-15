@@ -19,43 +19,43 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-column1">
           <div className='footer-logo'>
-          <a>
-            <img src={trademarkiaLogo} alt="Trademarkia Logo"></img>
-          </a>
+            <a>
+              <img src={trademarkiaLogo} alt="Trademarkia Logo"></img>
+            </a>
           </div>
           <p>World's #1 website to register your trademark and protect your brand, name, logo or slogan</p>
-          <div style={{padding: '20px 0px 10px 0px'}}>
-          <h2>Social Links</h2>
-          <div className="social-links">
-            <a href="#" className="social-icon">
-              <img src={instagram}  alt="Instagram" />
-            </a>
-            <a href="#" className="social-icon">
-              <img src={facebook} alt="Facebook" />
-            </a>
-            <a href="#" className="social-icon">
-              <img src={twitter} alt="X" />
-            </a>
-            <a href="#" className="social-icon">
-              <img src={linkedin} alt="LinkedIn" />
-            </a>
-            <a href="#" className="social-icon">
-              <img src={tiktok} alt="TikTok" />
-            </a>
-            <a href="#" className="social-icon">
-              <img src={youtube} alt="YouTube" />
-            </a>
-          </div>
+          <div style={{ padding: '20px 0px 10px 0px' }}>
+            <h2>Social Links</h2>
+            <div className="social-links">
+              <a href="#" className="social-icon">
+                <img src={instagram} alt="Instagram" />
+              </a>
+              <a href="#" className="social-icon">
+                <img src={facebook} alt="Facebook" />
+              </a>
+              <a href="#" className="social-icon">
+                <img src={twitter} alt="X" />
+              </a>
+              <a href="#" className="social-icon">
+                <img src={linkedin} alt="LinkedIn" />
+              </a>
+              <a href="#" className="social-icon">
+                <img src={tiktok} alt="TikTok" />
+              </a>
+              <a href="#" className="social-icon">
+                <img src={youtube} alt="YouTube" />
+              </a>
+            </div>
           </div>
 
-          <div className="trusted-reviews" style={{padding: '20px 0px 20px 0px'}}>
+          <div className="trusted-reviews" style={{ padding: '20px 0px 20px 0px' }}>
             <h3>Trusted Reviews</h3>
             <div className="review">
-              <img src={customerapproved} alt="Customer Approved"/>
+              <img src={customerapproved} alt="Customer Approved" />
               <span className="rating">4.6/5</span>
             </div>
             <div className="review">
-              <img src={googlereview} alt="Google Reviews"/>
+              <img src={googlereview} alt="Google Reviews" />
               <span className="rating">4.8/5</span>
             </div>
           </div>
@@ -90,7 +90,7 @@ const Footer = () => {
             <li>Owner search</li>
             <li>Attorney Ranking Search</li>
             <li>Domain Search</li>
-            
+
           </ul>
           <h3>Resources</h3>
           <ul>
@@ -107,7 +107,7 @@ const Footer = () => {
             <li>Company Ranking</li>
             <li>Law Firms Ranking</li>
             <li>Attorney Ranking</li>
-            <li style={{minHeight: '1.5em'}}> </li>
+            <li style={{ minHeight: '1.5em' }}> </li>
           </ul>
           <h3>Company</h3>
           <ul>
@@ -124,14 +124,14 @@ const Footer = () => {
         <h3>Contact</h3>
         <div className="contact-methods">
           <div className="contact-method">
-            <img src={phoneIcon} alt="Phone"  className='contact-icon'/>
+            <img src={phoneIcon} alt="Phone" className='contact-icon' />
             <div>
               <span>Call</span>
               <a href="tel:+18777949511">+1 (877) 794-9511</a>
             </div>
           </div>
           <div className="contact-method">
-            <img src={emailIcon} alt="Email"  className='contact-icon'/>
+            <img src={emailIcon} alt="Email" className='contact-icon' />
             <div>
               <span>Email</span>
               <a href="#">Leave a message →</a>

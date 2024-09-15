@@ -1,107 +1,149 @@
 .trademark-card {
   display: flex;
-  border: 1px solid #090909;
-  margin-bottom: 15px;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #fff;
-  
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-.trademark-mark {
-  flex: 0 0 100px;
-  margin-right: 15px;
+.trademark-card>div {
+  flex: 1;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .trademark-mark img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  border-radius: 4px;
 }
 
 .trademark-details {
-  flex: 1;
-  border: 1px solid #090909;
+  /* border: 2px solid black; */
+  gap: 30px;
+}
+
+.trademark-details-mark-owner {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid black; */
+}
+
+
+.trademark-details-mark-number {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid black; */
 }
 
 .trademark-details h3 {
-  color: #1a0dab;
-  margin: 0 0 5px 0;
-}
-
-.trademark-number, .trademark-date {
-  color: #006621;
-  margin: 2px 0;
-}
-
-.trademark-owner {
-  color: #545454;
-  font-size: 0.9em;
-  margin: 5px 0;
-  border: 1px solid #090909;
-}
-
-.trademark-status {
-  flex: 0 0 150px;
-  text-align: center;
-}
-
-.status-label {
-  display: inline-block;
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-size: 0.9em;
+  margin: 0;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
-.status-label.live-registered {
-  background-color: #e6f4ea;
-  color: #1e8e3e;
+.trademark-owner,
+.trademark-number,
+.trademark-date {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #555;
 }
 
-.status-date, .history-date {
-  color: #545454;
-  font-size: 0.9em;
+.trademark-status {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* border: 2px solid black; */
+}
+
+.trademark-status-label-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 2px solid black; */
+}
+
+.status-label.registered {
+  color: #28a745;
+  /* Green */
+}
+
+.status-label.pending {
+  color: #ffc107;
+  /* Yellow */
+}
+
+.status-label.abandoned {
+  color: #dc3545;
+  /* Red */
+}
+
+.status-label.other {
+  color: #007bff;
+  /* Blue */
+}
+
+.status-date,
+.history-date,
+.trademark-renewal {
   margin: 5px 0;
+  font-size: 0.8em;
+  color: #888;
 }
 
 .trademark-class {
-  flex: 0 0 200px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  overflow: hidden;
+  /* border: 2px solid black; */
 }
 
-.class-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-}
-
-.trademark-class p {
-  color: #545454;
+.trademark-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 0.9em;
-  margin: 5px 0;
+  margin: 0;
 }
 
-.list-view {
-  flex-direction: row;
+.trademark-class-info {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+  color: #555;
 }
 
-.grid-view {
-  flex-direction: column;
-  width: calc(33.33% - 20px);
-  margin: 10px;
+
+.trademark-expand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expand-icon {
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #797979;
+  transition: color 0.3s;
+  padding: 8px;
+  background-color: #ebebeb;
+  border-radius: 100px 100px 100px 100px;
+}
+
+.expand-icon:hover {
+  color: #0056b3;
 }
 
 @media (max-width: 768px) {
   .trademark-card {
     flex-direction: column;
-  }
-  
-  .trademark-mark, .trademark-details, .trademark-status, .trademark-class {
-    flex: 1 1 auto;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 10px;
   }
 }
