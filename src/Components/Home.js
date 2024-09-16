@@ -15,15 +15,17 @@ const Home = ({ searchTerm }) => {
   const [categoriesList, setCategoriesList] = useState([]);
   const [correspondentsList, setCorrespondentsList] = useState([]);
   const [count, setCount] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
-  const rowsPerPage = 5;
+
+  const [totalPages, setTotalPages] = useState(1);
+  const rowsPerPage = 10;
+  const [page, setPage] = useState(1);
+
   const [expanded, setExpanded] = useState({});
   const [selectedOwners, setSelectedOwners] = useState([]);
   const [selectedAttorneys, setSelectedAttorneys] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedCorrespondents, setSelectedCorrespondents] = useState([]);
   const [status, setStatus] = useState("all");
-  const [page, setPage] = useState(1);
   const [sortOrder, setSortOrder] = useState("desc");
 
   const fetchTrademarks = async (page, statusFilter) => {
@@ -88,6 +90,122 @@ const Home = ({ searchTerm }) => {
     sortOrder,
   ]);
 
+// const handleNext = () => {
+//     if (page < totalPages) {
+//         setPage(page + 1);
+//     }
+// };
+
+// const handlePrevious = () => {
+//     if (page > 1) {
+//         setPage(page - 1);
+//     }
+// };
+
+// const handleFirstPage = () => {
+//     setPage(1);
+// };
+
+// const handleLastPage = () => {
+//     setPage(totalPages);
+// };
+
+
+const handlePageClick = (pageNum) => {
+  setPage(pageNum);
+};
+
+const handleNext = () => {
+  if (page < totalPages) {
+    setPage(page + 1);
+  }
+};
+
+const handlePrevious = () => {
+  if (page > 1) {
+    setPage(page - 1);
+  }
+};
+
+// Render numbered pagination
+// const renderPageNumbers = () => {
+//   let pageNumbers = [];
+//   for (let i = 1; i <= totalPages; i++) {
+//     pageNumbers.push(
+//       <button
+//         key={i}
+//         onClick={() => handlePageClick(i)}
+//         className={page === i ? 'active' : ''}
+//       >
+//         {i}
+//       </button>
+//     );
+//   }
+
+
+const renderPageNumbers = () => {
+  const pageNumbers = [];
+  
+  // Show first 3 pages
+  for (let i = 1; i <= 2; i++) {
+    pageNumbers.push(
+      <button
+        key={i}
+        onClick={() => handlePageClick(i)}
+        className={page === i ? 'active' : ''}
+      >
+        {i}
+      </button>
+    );
+  }
+
+  // Add dots if the current page is greater than 4
+  if (page > 3) {
+    pageNumbers.push(<span key="dots1">...</span>);
+  }
+
+  // Show current page if it's not already shown in the first 3 or last 3
+  if (page > 3 && page < totalPages - 2) {
+    pageNumbers.push(
+      <button
+        key={page}
+        onClick={() => handlePageClick(page)}
+        className="active"
+      >
+        {page}
+      </button>
+    );
+  }
+
+  // Add dots if the current page is less than totalPages - 3
+  if (page < totalPages - 2) {
+    pageNumbers.push(<span key="dots2">...</span>);
+  }
+
+  // Show last 3 pages
+  for (let i = totalPages - 1; i <= totalPages; i++) {
+    if (i > 3) {
+      pageNumbers.push(
+        <button
+          key={i}
+          onClick={() => handlePageClick(i)}
+          className={page === i ? 'active' : ''}
+        >
+          {i}
+        </button>
+      );
+    }
+  }
+  return pageNumbers;
+};
+
+const toggleExpand = (index) => {
+    setExpanded(prev => ({
+        ...prev,
+        [index]: !prev[index]
+    }));
+};
+
   // console.log(trademarks);
   const toggleView = (type) => {
     setViewType(type);
@@ -111,6 +229,8 @@ const Home = ({ searchTerm }) => {
     }
     setPage(1); // Reset to first page when filters change
   };
+
+  
 
   return (
     <main className="home">
@@ -190,6 +310,29 @@ const Home = ({ searchTerm }) => {
           )}
           <ApplyForTrademark />
         </div>
+      </div>
+
+      {/* <div className="pagination">
+        <button onClick={handleFirstPage}>First</button>
+        <button onClick={handlePrevious}>Previous</button>
+        <button onClick={handleNext}>Next</button>
+        <button onClick={handleLastPage}>Last</button>
+      </div> */}
+
+<div className="pagination">
+        <button onClick={() => handlePageClick(1)} disabled={page === 1}>
+          First
+        </button>
+        <button onClick={handlePrevious} disabled={page === 1}>
+          Previous
+        </button>
+        {renderPageNumbers()}
+        <button onClick={handleNext} disabled={page === totalPages}>
+          Next
+        </button>
+        <button onClick={() => handlePageClick(totalPages)} disabled={page === totalPages}>
+          Last
+        </button>
       </div>
     </main>
   );
